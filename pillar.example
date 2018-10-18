@@ -48,8 +48,15 @@ rabbitmq:
       - name: HA
       - pattern: '.*'
       - definition: '{"ha-mode": "all"}'
+
+    other_policy:
+      - vhost: '/other'
+      - name: HA-other
+      - pattern: '.*'
+      - definition: '{"ha-mode": "all"}'
   vhost:
     vh_name: '/virtual/host'
+    other_vhost: '/other'
   user:
     admin:
       - password: password
